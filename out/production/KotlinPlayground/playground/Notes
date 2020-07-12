@@ -1,0 +1,77 @@
+package playground
+
+Kotlin imports kotlin package by default which contains tons of stuff like arrays and println
+
+var - mutable, changeable in the block
+val - immutable variable (final)
+
+You can change var variables of final objects
+
+typealias - renaming classes/methods to use them easier
+
+ wrapper - shortened method call name (println instead of system.out.println)
+
+soft keywords and hard keywords(class, package...)
+
+Collection data can be accessed like it is array (names[2])
+
+String is Kotlin string, not Java (a bit cooler)
+
+Exception throwing isn't in Kotlin. All of them are Unchecked
+
+Ternary condition - doesnt exist. Replaced by if
+
+For loop doesnt exist
+
+static keyword doesn't exist, but concept is still there
+
+No new keyword, use x=Employee()
+
+In java - (==) checks for reference equality and equals() checks for structural equality
+In Kotlin - (==) is the same as (equals), it checks for structural equality. Check reference equality with (===)
+
+bit operators in Java - | &
+bit operators in Kotlin - or, and. Type if instance - xString is String. Casting - As
+
+Kotlin string templates- use variables in string
+                            println("number = $number" and sum with $number2 is ${number+number2})
+
+Kotlin raw string = println(""" c:\somedir\dir\dirs """). Can also be multiline
+
+Intelij tools>kotlin>repl
+
+Class types: Any-Object class, Unit- returns singleton unit instance (void in java), nothing- function is not expected to ever return
+
+creating arrays : stringArrayOf
+val evens = Array(16) { i -> i * 2 } pretty cool
+intArray.toLongArray
+myIntArrayy.toTypeArray()
+val mixedArray = arrayOf("hello", 22, BigDecimal(100), 'a') it's Array<Any>
+
+-----NULL----------
+variable? - nullable variable . Safe Operator Expression
+variable?.length(). Generates null check. Doesnt call the method if variable is null. returns null
+
+Elvis operator: variable = canBeNullVariable ?: "default value if canBeNullVariable is null"
+can be combined variable?.other?.morevars ?: "valuable if one of those are null"
+ABSOLUTELY SURE variable wont be null - variable!!.toUpperCase(). If it still is null, throws NullPointerEx
+
+Let function - variable?.let {println(variable)} same as if (variable !=null){println(variable)}
+
+val nullableInts = arrayOfNulls<Int>(5) - array of 5 nulls
+
+------OOP----------
+everything public by default. As many classes as you want in 1 file, classes can be private.
+
+private - compiled to java package private
+internal - compiled to java public
+
+class MyClass (val classNumber:int){} - and classNumber can be used in class without any assign
+
+Kotlin classes only have properties, no fields
+
+public properties have generated getters and setters, but you just use dot notations. guy.name = guy.getName();
+
+can add custom gets and sets with adding  variable get(){..code..  return field} (the very next line)
+
+Data class -  come with to string/equals/hashcode/copy functions. Primary constructor has to have at least 1 parameter
